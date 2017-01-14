@@ -18,6 +18,15 @@ public class SpiderLeg {
     private List<String> links = new LinkedList<String>();
     private Document htmlDocument;
     
+    
+    /**
+     * This performs all the work. It makes an HTTP request, checks the response, and then gathers
+     * up all the links on the page. Perform a searchForWord after the successful crawl
+     * 
+     * @param url
+     *            - The URL to visit
+     * @return whether or not the crawl was successful
+     */
     public boolean crawl(String url)
     {
         try
@@ -50,6 +59,14 @@ public class SpiderLeg {
         }
     }
     
+    /**
+     * Performs a search on the body of on the HTML document that is retrieved. This method should
+     * only be called after a successful crawl.
+     * 
+     * @param searchWord
+     *            - The word or string to look for
+     * @return whether or not the word was found
+     */
     public boolean searchForWord(String searchWord)
     {
         // Defensive coding. This method should only be used after a successful crawl.

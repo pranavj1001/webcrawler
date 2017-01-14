@@ -20,5 +20,3 @@ This project is based on the web crawler explained in article.
 [Author's Name: Stephen](http://www.netinstructions.com/author/stephen/)
 
 [The tutorial with detailed explanation can be found here.](http://www.netinstructions.com/how-to-make-a-simple-web-crawler-in-java/)
-
-Note: This repo is not complete yet. (WIP)

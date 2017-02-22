@@ -3,7 +3,7 @@ A simple Web Crawler
 
 This repository contains a Web Crawler. The Crawler's code is written in Java Language.
 
-**Update** - A new crawler using JS is in the works.
+**Update** - A new webcrawler using JS is in the works.
 
 I've used External Library **jsoup** to make HTTP request and to parse the page.
 

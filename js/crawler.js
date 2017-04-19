@@ -23,3 +23,13 @@ function searchForWord($, word) {
   return(bodyText.indexOf(word.toLowerCase()) !== -1);
 
 }
+
+function collectInternalLinks($) {
+
+    var relativeLinks = $("a[href^='/']");
+    console.log("Found " + relativeLinks.length + " relative links on page");
+    relativeLinks.each(function() {
+        pagesToVisit.push(baseUrl + $(this).attr('href'));
+    });
+    
+}

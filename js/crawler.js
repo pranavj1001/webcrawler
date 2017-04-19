@@ -16,3 +16,10 @@ request(pageToVisit, function(error, response, body) {
      console.log("Page title:  " + $('title').text());
    }
 });
+
+function searchForWord($, word) {
+
+  var bodyText = $('html > body').text().toLowerCase();
+  return(bodyText.indexOf(word.toLowerCase()) !== -1);
+
+}

@@ -3,6 +3,7 @@ var cheerio = require('cheerio');
 var URL = require('url-parse');
 
 var START_URL = "https://pranavj1001.github.io";
+var SEARCH_WORD = "android";
 var MAX_PAGES_TO_VISIT = 10;
 
 var pagesVisited = {};
@@ -12,6 +13,22 @@ var url = new URL(START_URL);
 var baseUrl = url.protocol + "//" + url.hostname;
 
 pagesToVisit.push(START_URL);
+crawl();
+
+function crawl() {
+  if(numPagesVisited >= MAX_PAGES_TO_VISIT) {
+    console.log("Reached max limit of number of pages to visit.");
+    return;
+  }
+  var nextPage = pagesToVisit.pop();
+  if (nextPage in pagesVisited) {
+    // We've already visited this page, so repeat the crawl
+    crawl();
+  } else {
+    // New page we haven't visited
+    visitPage(nextPage, crawl);
+  }
+}
 
 function visitPage(url, callback) {
 

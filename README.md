@@ -1,11 +1,15 @@
 # webcrawler
 A simple Web Crawler
 
-This repository contains a Web Crawler. The Crawler's code is written in Java Language.
+This repository contains two Web Crawlers.
 
-**Update** - A new webcrawler using JS is in the works.
+1. Web Crawler in Java - I've used External Library **jsoup** to make HTTP request and to parse the page. By making appropiate changes to the code, it can be used to search anything on the Internet. Inorder to use it, simply run the SpiderTest.java file.
 
-I've used External Library **jsoup** to make HTTP request and to parse the page.
+2. Web Crawler in JavaScript - I've used **cheerio** to parse the page. By making appropiate changes to the code, it can be used to search anything on the Internet. Inorder to use it, simply type the following line in the Node.js Command Prompt.
+
+```
+node crawler.js
+```
 
 **What is Web Crawler?**
 
